@@ -27,6 +27,6 @@ int		ft_atoi(const char *str)
 	if (--str && (*(str + 1) == '-' || (*(str + 1) == '+')) && ++str)
 		(*str == '-') ? (min = -1) : 0;
 	while (*(++str) >= '0' && *str <= '9' && *str)
-		ret = ret * 10 + (*str - 48) * (long long)min;
-	return ((int)ret);
+		ret = ret * 10 + (*str - 48) * min;
+	return (ret);
 }
